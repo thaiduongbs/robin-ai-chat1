@@ -14,9 +14,13 @@ CORS(app)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"
 
+# ✅ Add this route to handle root URL
+@app.route("/", methods=["GET"])
+def home():
+    return "Robin AI Chat backend is running!"
+
 @app.route("/chat", methods=["POST"])
 def chat():
-    
     user_input = request.json.get("message").lower().strip()
 
     # Custom response for name-related questions
