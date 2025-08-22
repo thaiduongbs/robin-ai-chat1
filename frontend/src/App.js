@@ -1,6 +1,8 @@
 ﻿import React, { useState } from 'react';
 import './App.css';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 function App() {
     const [message, setMessage] = useState('');
     const [chatHistory, setChatHistory] = useState([]);
@@ -17,7 +19,7 @@ function App() {
         setTypingText('');
 
         try {
-            const res = await fetch('http://localhost:5000/chat', {
+            const res = await fetch(`${API_URL}/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message })
