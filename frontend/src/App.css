@@ -1,0 +1,74 @@
+.App {
+    text-align: center;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.chat-window {
+    width: 60%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.chat-bubble {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+    .chat-bubble.user {
+        justify-content: flex-end;
+    }
+
+    .chat-bubble.ai {
+        justify-content: flex-start;
+    }
+
+.avatar {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+.chat-bubble.user .avatar {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+.text {
+    background-color: #e0e0e0;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    max-width: 70%;
+    text-align: left;
+}
+
+.chat-bubble.user .text {
+    background-color: #cce5ff;
+}
+
+.input-area {
+    margin-top: 2rem;
+}
+
+input {
+    width: 60%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
